@@ -6,14 +6,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>kati</groupId>
     <artifactId>strutspractise</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <struts2.version>2.5.14.1</struts2.version>
-        <log4j2.version>2.9.1</log4j2.version>
-        <jetty-plugin.version>9.4.7.v20170914</jetty-plugin.version>
-    </properties>
+
+    <modules>
+        <module>hello-world</module>
+        <module>interceptors</module>
+    </modules>
+
 
     <dependencies>
 
@@ -31,58 +32,6 @@
 
     </dependencies>
 
-    <build>
-        <finalName>struts-practise</finalName>
-
-        <plugins>
-            <!--  <plugin>
-                  <groupId>org.eclipse.jetty</groupId>
-                  <artifactId>jetty-maven-plugin</artifactId>
-                  <version>${jetty-plugin.version}</version>
-                  <configuration>
-                      <webApp>
-                          <contextPath>/${project.artifactId}</contextPath>
-                      </webApp>
-                      <stopKey>CTRL+C</stopKey>
-                      <stopPort>8999</stopPort>
-                      <scanIntervalSeconds>10</scanIntervalSeconds>
-                      <scanTargets>
-                          <scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>
-                      </scanTargets>
-                  </configuration>
-              </plugin>    -->
-
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
-                <configuration>
-                    <verbose>true</verbose>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <showWarnings>true</showWarnings>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <url>http://localhost:8080/manager/text</url>
-                    <server>TomcatServer</server>
-                    <path>/struts-practise</path>
-                </configuration>
-            </plugin>
-
-
-        </plugins>
-
-
-
-
-    </build>
 
 
 </project>
