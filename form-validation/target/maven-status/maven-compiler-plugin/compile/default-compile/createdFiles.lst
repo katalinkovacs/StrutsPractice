@@ -1,0 +1,4 @@
+com\kati\helloworld\model\MessageStore.class
+com\kati\register\model\Person.class
+com\kati\helloworld\action\HelloWorldAction.class
+com\kati\register\action\Register.class

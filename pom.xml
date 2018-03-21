@@ -13,6 +13,7 @@
     <modules>
         <module>hello-world</module>
         <module>interceptors</module>
+        <module>form-validation</module>
     </modules>
 
 
